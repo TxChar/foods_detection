@@ -21,15 +21,15 @@ from utils.dice_score import dice_loss
 
 from torch.utils.tensorboard import SummaryWriter
 
-dir_img = Path('./data/imgs/')
-dir_mask = Path('./data/masks/')
+dir_img = Path('./data/images_resize/')
+dir_mask = Path('./data/unet_dataset/SegmentationClass/')
 dir_checkpoint = Path('./checkpoints/')
 
 
 def train_model(
         model,
         device,
-        epochs: int = 5,
+        epochs: int = 2,
         batch_size: int = 1,
         learning_rate: float = 1e-5,
         val_percent: float = 0.1,
